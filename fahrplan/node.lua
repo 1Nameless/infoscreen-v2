@@ -46,14 +46,14 @@ function node.render()
         if departure == 0 then
            departure = "jetzt"
         else
-           departure = "in " .. departure  .. "'"
+           departure = "in " .. departure  .. "′"
         end
         if (fahrt.AbfahrtszeitSoll > current_seconds) then
                 font:write(50, 150 + 70 * idx, departure, 80, 0,1,0,1)
                 font:write(270, 150 + 70 * idx, fahrt.Linienname, 80,  0,1,0,1)
                 font:write(440, 150 + 70 * idx, fahrt.Richtungstext, 80, 0,1,0,1)
                 if fahrt.Verspaetung > 0 then
-                      font:write(970, 150 + 70 * idx, "" .. fahrt.Verspaetung, 80, 0.8,0.8,0.3,1)
+                      font:write(970, 150 + 70 * idx, "" .. fahrt.Verspaetung .. "″", 80, 0.8,0.8,0.3,1)
                 else
                       --font:write(970, 150 + 70 * idx, "0", 80, 0.8,0.8,0.3,1)
                 end
